@@ -1,0 +1,65 @@
+
+###
+
+POST     http://127.0.0.1:8000/api/v1/groups/
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc2OTk1ODk0LCJqdGkiOiIyMjI2MzI5MzJhZWE0YjFhYjU1ODA3MGUxMmM5MDVlMSIsInVzZXJfaWQiOjF9.TP-ugOU6h61ACJdJS4rGIQcjFUpQpIuKiY3NlZsF7GE
+
+{
+    "title": "Whiertttt",
+    "slug": "ff",
+    "description": "ffdfdfd"
+} 
+
+
+###
+
+GET   http://127.0.0.1:8000/api/v1/follows
+Content-Type: application/json
+
+
+###
+
+DELETE    http://127.0.0.1:8000/api/v1/posts/8/
+Content-Type: application/json
+Authorization: Token af9229c608059ae1c32bcf06ed392fd362f3299c
+
+###
+
+DELETE   http://127.0.0.1:8000/cats/4/
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc1OTI4NjQ2LCJqdGkiOiI0YjA3ZGQ5OGY5NjY0ZDU0YjBlZDY2ZDBmZGU0ODA5MyIsInVzZXJfaWQiOjN9.qEhjLeY7oO6NSiiDk5DcU2sxxcBt8XY270nz-lj0FqQ
+
+
+###
+
+POST  http://127.0.0.1:8000/api/v1/posts/
+Content-Type: application/json
+Authorization: Token 6335b17bee82c7a6084ab2705887b52ed2ef8f4e
+
+{
+    "text": "Whie",
+} 
+
+
+###
+
+POST  http://127.0.0.1:8000/api/v1/auth/jwt/create/
+Content-Type: application/json
+
+{
+    "username": "logrus19",
+    "password": "1278zima"
+} 
+
+
+###
+
+POST  http://127.0.0.1:8000/api/v1/api-token-auth/
+Content-Type: application/json
+
+{
+    "username": "logrus19",
+    "email": "anton.sadagov@gmail.com",
+    "password": "1278zima"
+} 
