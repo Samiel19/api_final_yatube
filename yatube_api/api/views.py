@@ -1,6 +1,6 @@
 from rest_framework import viewsets, permissions, filters, pagination
 
-from posts.models import Post, User, Group
+from posts.models import Post, User, Group, Comment
 from .serializers import (
     CommentSerializer,
     PostSerializer,
@@ -30,7 +30,7 @@ class CommentViewSet(viewsets.ModelViewSet):
         return Post.objects.get(id=self.kwargs.get('post_id'))
 
     def get_queryset(self):
-        return self.__post.comments
+        return Comment.objects.filter(post=self.__post)
 
     def perform_create(self, serializer):
         serializer.save(author=self.request.user, post=self.__post)
